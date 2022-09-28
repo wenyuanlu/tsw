@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/drawable_151418_r18_shape"
+        android:minHeight="120dp"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_14"
+        android:paddingRight="@dimen/dp_20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="试听"
+            android:textColor="@color/ff84848f"
+            android:textSize="@dimen/sp_12"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/recorder_selector_file_changer_channel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@mipmap/recording_icon_switch"
+            android:drawablePadding="5dp"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="换一个"
+            android:textColor="@color/FF84848F"
+            android:textSize="@dimen/sp_10" />
+
+        <ImageView
+            android:id="@+id/recorder_selector_file_play"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/recording_button_suspended" />
+
+        <com.google.android.exoplayer2.ui.PlayerControlView
+            android:id="@+id/recorder_selector_file_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_toLeftOf="@id/recorder_selector_file_show_timer"
+            android:layout_toRightOf="@id/recorder_selector_file_play"
+            app:show_timeout="0" />
+
+        <TextView
+            android:id="@+id/recorder_selector_file_show_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="right"
+            android:minWidth="50dp"
+            android:text="00:00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12" />
+    </RelativeLayout>
+</layout>

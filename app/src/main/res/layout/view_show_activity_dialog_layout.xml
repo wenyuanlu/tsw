@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_activity_center"
+            android:layout_width="@dimen/dp_266"
+            android:layout_height="@dimen/dp_338"
+            android:layout_centerInParent="true"
+            android:scaleType="center" />
+
+        <ImageView
+            android:id="@+id/iv_activity_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_activity_center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_80"
+            android:scaleType="center"
+            android:src="@mipmap/home_icon_close" />
+
+    </RelativeLayout>
+</layout>

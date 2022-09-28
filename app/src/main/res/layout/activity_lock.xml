@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop" />
+
+    <com.maishuo.tingshuohenhaowan.widget.lock.SlidingFinishLayout
+        android:id="@+id/lock_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextClock
+            android:id="@+id/lock_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/lockDate"
+            android:layout_centerHorizontal="true"
+            android:format24Hour="HH:mm"
+            android:textColor="#ffffff"
+            android:textSize="40sp" />
+
+        <TextClock
+            android:id="@+id/lock_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rl_head"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="40dp"
+            android:format12Hour="MM月dd日 E"
+            android:format24Hour="MM月dd日 E"
+            android:includeFontPadding="false"
+            android:textColor="#ffffff"
+            android:textSize="22sp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/view_animationHead"
+                android:layout_width="@dimen/dp_300"
+                android:layout_height="@dimen/dp_300"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center" />
+
+            <com.maishuo.tingshuohenhaowan.widget.CircleImageView
+                android:id="@+id/iv_head"
+                android:layout_width="@dimen/dp_180"
+                android:layout_height="@dimen/dp_180"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                app:es_shape_type="round" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_head"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+
+        <com.maishuo.tingshuohenhaowan.widget.lock.HintTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:includeFontPadding="false"
+            android:text=">>> 滑动解锁"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+    </com.maishuo.tingshuohenhaowan.widget.lock.SlidingFinishLayout>
+
+    <com.google.android.exoplayer2.ui.PlayerControlView
+        android:id="@+id/control_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        app:show_timeout="0" />
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.maishuo.tingshuohenhaowan.wallet.viewmodel.PaySelectorMoneyViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ff151418"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dp_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:drawableRight="@mipmap/exceptional_bounced_icon_question"
+            android:gravity="center"
+            android:onClick="@{()->viewmodel.showPayTip()}"
+            android:text="充值"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_12" />
+
+        <com.maishuo.tingshuohenhaowan.widget.CommonRecyclerView
+            android:id="@+id/gift_buy_pay_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="14dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_marginTop="@dimen/dp_14"
+            android:layout_marginRight="@dimen/dp_30"
+            android:layout_marginBottom="@dimen/dp_14">
+
+            <TextView
+                android:id="@+id/gift_buy_pay_money_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@mipmap/exceptional_recharge_bounced_drill"
+                android:drawablePadding="10dp"
+                android:textColor="@color/ffD2D2D2"
+                android:textSize="@dimen/sp_16"
+                tools:text="0" />
+
+            <ImageView
+                android:id="@+id/gift_buy_pay_to_pay"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_30"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:onClick="@{()->viewmodel.sendPayMoney()}"
+                android:src="@mipmap/exceptional_bounced_button_recharge" />
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

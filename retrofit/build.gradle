@@ -1,0 +1,21 @@
+apply plugin: 'com.android.library'
+apply from: '../config.gradle'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'kotlin-kapt'
+
+android {
+    defaultConfig {
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    //gradle 依赖
+    implementation project(':commonlibs')
+}

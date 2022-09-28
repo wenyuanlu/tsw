@@ -1,0 +1,30 @@
+apply plugin: 'com.android.library'
+apply from: '../config.gradle'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'kotlin-kapt'
+
+android {
+    defaultConfig {
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    //gradle 依赖
+    implementation project(':commonlibs')
+
+    // 依赖 libs 目录下所有 aar 包
+    api fileTree(include: ['*.aar'], dir: 'libs')
+    // 依赖 libs 目录下所有 jar 包
+    api fileTree(include: ['*.jar'], dir: 'libs')
+
+    //微信分享
+    api 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:5.3.1'
+
+}

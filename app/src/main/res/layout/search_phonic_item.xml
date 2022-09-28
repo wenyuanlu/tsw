@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.maishuo.tingshuohenhaowan.widget.CircleImageView
+        android:id="@+id/iv_search_result_head"
+        android:layout_width="@dimen/dp_42"
+        android:layout_height="@dimen/dp_42"
+        android:scaleType="centerCrop"
+        app:es_shape_type="round" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_42"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_toRightOf="@+id/iv_search_result_head"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!--名字-->
+        <TextView
+            android:id="@+id/iv_search_result_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="我的名字"
+            android:textColor="@color/FFD6D6DD"
+            android:textSize="@dimen/sp_14" />
+
+        <!--在线时间-->
+        <TextView
+            android:id="@+id/iv_search_result_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="-------在线"
+            android:textColor="@color/FF84848F"
+            android:textSize="@dimen/sp_12" />
+
+    </LinearLayout>
+
+    <!--内容-->
+    <TextView
+        android:id="@+id/iv_search_result_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_search_result_head"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/dp_14"
+        android:text="内容"
+        android:textColor="@color/FFBFBFC6"
+        android:textSize="@dimen/sp_14" />
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_250"
+        android:layout_height="@dimen/dp_154"
+        android:layout_below="@+id/iv_search_result_content">
+
+        <com.maishuo.tingshuohenhaowan.widget.CircleImageView
+            android:id="@+id/iv_search_result_picture"
+            android:layout_width="@dimen/dp_250"
+            android:layout_height="@dimen/dp_154"
+            android:layout_marginTop="@dimen/dp_14"
+            android:scaleType="centerCrop"
+            app:ease_radius="@dimen/dp_6"
+            app:es_shape_type="rectangle" />
+
+        <View
+            android:layout_width="@dimen/dp_250"
+            android:layout_height="@dimen/dp_154"
+            android:background="@drawable/shape_work_gradient_item" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_search_result_picture"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_12"
+            android:background="@drawable/shape_work"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_6"
+            android:paddingTop="@dimen/dp_2"
+            android:paddingRight="@dimen/dp_7"
+            android:paddingBottom="@dimen/dp_2">
+
+            <ImageView
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="@dimen/dp_10"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/search_list_icon_like" />
+
+            <TextView
+                android:id="@+id/iv_search_result_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_4"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_10" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--反馈成功的页面-->
+    <RelativeLayout
+        android:id="@+id/rl_suggest_success"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_52"
+        android:layout_marginRight="@dimen/dp_16"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_suggest_icon"
+            android:layout_width="@dimen/dp_76"
+            android:layout_height="@dimen/dp_76"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/icon_success" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_suggest_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="反馈成功"
+            android:textColor="@color/FF84848F"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_40"
+            android:text="上海迈朔信息科技有限公司 版权所有"
+            android:textColor="@color/FF84848F"
+            android:textSize="@dimen/sp_12" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_suggest_edit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/et_suggest_content"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_157"
+            android:layout_marginTop="@dimen/dp_14"
+            android:background="@drawable/shape_suggset_edit"
+            android:gravity="left"
+            android:hint="请输入反馈内容"
+            android:padding="@dimen/dp_14"
+            android:textColor="@color/FF84848F"
+            android:textColorHint="@color/FF84848F"
+            android:textSize="@dimen/sp_12" />
+
+        <EditText
+            android:id="@+id/et_suggest_contact"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_below="@id/et_suggest_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:background="@drawable/shape_suggset_edit"
+            android:gravity="left|center"
+            android:hint="QQ、微信、电话，方便我们联系您（选填）"
+            android:inputType="number"
+            android:padding="10dp"
+            android:textColor="@color/FF84848F"
+            android:textColorHint="@color/FF84848F"
+            android:textSize="@dimen/sp_12" />
+
+        <Button
+            android:id="@+id/bt_suggest_submit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_40"
+            android:background="@drawable/shape_setting_bt"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.maishuo.tingshuohenhaowan.gift.viewmodel.SendGiftViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ff151418"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dp_6"
+        android:paddingBottom="@dimen/dp_15">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/send_gift_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <LinearLayout
+            android:id="@+id/send_gift_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            android:orientation="horizontal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:paddingLeft="@dimen/dp_22"
+            android:paddingRight="@dimen/dp_20">
+
+            <TextView
+                android:id="@+id/send_gift_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@mipmap/exceptional_recharge_bounced_drill"
+                android:textColor="@color/ffD2D2D2"
+                android:textSize="@dimen/sp_16"
+                android:drawablePadding="5dp"
+                tools:text="0" />
+
+            <TextView
+                android:id="@+id/send_gift_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@id/send_gift_money"
+                android:drawableRight="@mipmap/icon_arrow_gray"
+                android:onClick="@{() -> viewmodel.userClickRecharge()}"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:text="充值"
+                android:textColor="@color/ffff66B9"
+                android:textSize="@dimen/sp_12"
+                tools:ignore="HardcodedText,UseCompatTextViewDrawableXml" />
+
+            <TextView
+                android:id="@+id/send_gift_send"
+                android:layout_width="@dimen/dp_58"
+                android:layout_height="@dimen/dp_28"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/gift_send_background"
+                android:gravity="center"
+                android:onClick="@{() -> viewmodel.sendGift()}"
+                android:text="发送"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12"
+                tools:ignore="HardcodedText" />
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

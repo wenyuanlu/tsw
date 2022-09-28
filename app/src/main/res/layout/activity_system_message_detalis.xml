@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_14"
+        android:layout_marginRight="@dimen/dp_16">
+
+        <com.maishuo.tingshuohenhaowan.widget.CircleImageView
+            android:id="@+id/iv_system_head"
+            android:layout_width="@dimen/dp_36"
+            android:layout_height="@dimen/dp_36"
+            android:layout_centerVertical="true"
+
+            android:scaleType="centerCrop"
+            app:es_shape_type="round" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_toRightOf="@+id/iv_system_head"
+            android:background="@drawable/shape_praise_read_item"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_14"
+            android:paddingRight="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_14">
+
+            <!--标题-->
+            <TextView
+                android:id="@+id/iv_system_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/FFBFBFC6"
+                android:textSize="@dimen/sp_14" />
+
+            <!--内容-->
+            <TextView
+                android:id="@+id/iv_system_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text=""
+                android:textColor="@color/FFBFBFC6"
+                android:textSize="@dimen/sp_12" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

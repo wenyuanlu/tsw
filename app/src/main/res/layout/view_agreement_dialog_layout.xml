@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/dp_30"
+        app:cardBackgroundColor="@color/protocol_dialog_bg"
+        app:cardCornerRadius="@dimen/dp_21"
+        app:cardElevation="0px"
+        tools:ignore="HardcodedText">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingTop="@dimen/dp_30"
+            android:paddingRight="@dimen/dp_20"
+            android:paddingBottom="@dimen/dp_30">
+
+            <TextView
+                android:id="@+id/agreement_dialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="用户服务协议和隐私协议"
+                android:textColor="@color/protocol_dialog"
+                android:textSize="@dimen/sp_16" />
+
+            <ScrollView
+                android:id="@+id/agreement_dialog_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/agreement_dialog_cancel"
+                android:layout_below="@id/agreement_dialog_title"
+                android:layout_marginTop="@dimen/dp_14">
+
+                <TextView
+                    android:id="@+id/agreement_dialog_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/protocol_str"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_12" />
+
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/agreement_dialog_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/agreement_dialog_ok"
+                android:layout_centerHorizontal="true"
+                android:text="不同意"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/agreement_dialog_ok"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:orientation="vertical"
+                app:cardBackgroundColor="@color/protocol_dialog"
+                app:cardCornerRadius="@dimen/dp_21"
+                app:cardElevation="0px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="同意"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14" />
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

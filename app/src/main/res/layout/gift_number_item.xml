@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="@dimen/dp_10"
+        android:layout_height="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_2"
+        android:layout_marginRight="@dimen/dp_8"
+        android:src="@mipmap/gift_cheng" />
+
+    <ImageView
+        android:id="@+id/iv_gift_number_first"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_40"
+        android:src="@mipmap/gift_number_1" />
+
+    <ImageView
+        android:id="@+id/iv_gift_number_second"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_40"
+        android:src="@mipmap/gift_number_0"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_gift_number_third"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_40"
+        android:src="@mipmap/gift_number_0"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_gift_number_four"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_40"
+        android:src="@mipmap/gift_number_0"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_gift_number_five"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_40"
+        android:src="@mipmap/gift_number_0"
+        android:visibility="gone" />
+
+</LinearLayout>

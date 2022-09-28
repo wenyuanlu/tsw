@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_chat_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_12"
+    android:layout_marginBottom="@dimen/dp_12">
+
+    <LinearLayout
+        android:id="@+id/ll_chat_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <!--上方的时间显示-->
+        <TextView
+            android:id="@+id/tv_chat_time_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/chat_text_item_top"
+            android:textSize="@dimen/sp_12"
+            android:visibility="gone" />
+
+        <!--说话的显示-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--左侧别人说话-->
+            <LinearLayout
+                android:id="@+id/ll_chat_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:orientation="horizontal">
+
+                <!--左侧别人的头像-->
+                <com.maishuo.tingshuohenhaowan.widget.CircleImageView
+                    android:id="@+id/iv_chat_other_head"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="@drawable/shape_head_background_default"
+                    android:scaleType="centerCrop"
+                    app:es_shape_type="round" />
+
+                <!--中间的 动画播放 及 录音时间-->
+                <RelativeLayout
+                    android:id="@+id/rl_chat_other_record"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_36"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:background="@drawable/chat_pic_box_white"
+                    android:orientation="horizontal">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/animation_chat_other"
+                        android:layout_width="@dimen/dp_12"
+                        android:layout_height="@dimen/dp_14"
+                        android:layout_centerVertical="true"
+                        app:lottie_autoPlay="false"
+                        app:lottie_fileName="chat_paly_left.json"
+                        app:lottie_loop="true" />
+
+                    <TextView
+                        android:id="@+id/tv_chat_other_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_6"
+                        android:text="11”"
+                        android:textColor="@color/chat_time_item"
+                        android:textSize="@dimen/sp_12" />
+
+                    <TextView
+                        android:id="@+id/tv_chat_other_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_6"
+                        android:layout_marginRight="@dimen/dp_6"
+                        android:text="发"
+                        android:textColor="@color/chat_time_item"
+                        android:textSize="@dimen/sp_12"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <com.maishuo.tingshuohenhaowan.widget.CircleImageView
+                    android:id="@+id/iv_chat_other_picture"
+                    android:layout_width="@dimen/dp_190"
+                    android:layout_height="@dimen/dp_120"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"
+                    app:ease_radius="@dimen/dp_6"
+                    app:es_shape_type="rectangle" />
+
+                <!--<ImageView
+                    android:id="@+id/iv_chat_other_picture"
+                    android:layout_width="@dimen/dp_190"
+                    android:layout_height="@dimen/dp_120"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone" />-->
+
+                <com.maishuo.tingshuohenhaowan.widget.ChatStatusView
+                    android:id="@+id/iv_chat_other_send_status"
+                    android:layout_width="@dimen/dp_14"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_12" />
+
+            </LinearLayout>
+
+            <!--右侧自己说话-->
+            <LinearLayout
+                android:id="@+id/ll_chat_self"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_20"
+                android:orientation="horizontal">
+
+                <com.maishuo.tingshuohenhaowan.widget.ChatStatusView
+                    android:id="@+id/iv_chat_self_send_status"
+                    android:layout_width="@dimen/dp_14"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:gravity="bottom" />
+
+                <!--<ImageView
+                    android:id="@+id/iv_chat_self_picture"
+                    android:layout_width="@dimen/dp_190"
+                    android:layout_height="@dimen/dp_120"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone" />-->
+
+                <com.maishuo.tingshuohenhaowan.widget.CircleImageView
+                    android:id="@+id/iv_chat_self_picture"
+                    android:layout_width="@dimen/dp_190"
+                    android:layout_height="@dimen/dp_120"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"
+                    app:ease_radius="@dimen/dp_6"
+                    app:es_shape_type="rectangle" />
+
+                <!--中间的 动画播放 及 录音时间-->
+                <RelativeLayout
+                    android:id="@+id/rl_chat_self_record"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_36"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:layout_marginRight="@dimen/dp_8"
+                    android:background="@drawable/chat_pic_box_pink"
+                    android:orientation="horizontal">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/animation_chat_self"
+                        android:layout_width="@dimen/dp_12"
+                        android:layout_height="@dimen/dp_14"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        app:lottie_autoPlay="false"
+                        app:lottie_fileName="chat_paly_right.json"
+                        app:lottie_loop="true" />
+
+                    <TextView
+                        android:id="@+id/tv_chat_self_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_6"
+                        android:text="16”"
+                        android:textColor="@color/chat_time_item"
+                        android:textSize="@dimen/sp_12" />
+
+                    <TextView
+                        android:id="@+id/tv_chat_self_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_6"
+                        android:layout_marginRight="@dimen/dp_6"
+                        android:text="送"
+                        android:textColor="@color/chat_time_item"
+                        android:textSize="@dimen/sp_12"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <!--右侧别人的头像-->
+                <com.maishuo.tingshuohenhaowan.widget.CircleImageView
+                    android:id="@+id/iv_chat_self_head"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="@drawable/shape_head_background_default"
+                    android:scaleType="centerCrop"
+                    app:es_shape_type="round" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--中间的文本-->
+    <LinearLayout
+        android:id="@+id/ll_chat_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_0"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_0"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!--上方的时间显示-->
+        <TextView
+            android:id="@+id/tv_chat_time_top_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/chat_text_item_top"
+            android:textSize="@dimen/sp_12"
+            android:visibility="gone" />
+
+        <!--正常的文字展示-->
+        <TextView
+            android:id="@+id/tv_chat_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_chat_text_item"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_15"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_15"
+            android:paddingBottom="@dimen/dp_10"
+            android:text=""
+            android:textColor="@color/chat_text_item"
+            android:textSize="@dimen/sp_12"
+            android:visibility="gone" />
+
+        <!--礼物的文字展示-->
+        <LinearLayout
+            android:id="@+id/ll_chat_gift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_chat_text_item"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_15"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_15"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/tv_chat_gift_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="成功发送"
+                android:textColor="@color/chat_text_item"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tv_chat_gift_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="【比心】"
+                android:textColor="@color/chat_gift"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tv_chat_gift_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="给对方"
+                android:textColor="@color/chat_text_item"
+                android:textSize="@dimen/sp_12" />
+
+        </LinearLayout>
+
+        <!--是否回礼的文字展示-->
+        <TextView
+            android:id="@+id/tv_chat_gift_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_6"
+            android:paddingRight="@dimen/dp_10"
+            android:text="是否回礼？"
+            android:textColor="@color/chat_tip_back_hint"
+            android:textSize="@dimen/sp_12" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+

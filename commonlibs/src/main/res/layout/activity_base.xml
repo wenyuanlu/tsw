@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:orientation="vertical">
+
+        <!--title位置-->
+        <RelativeLayout
+            android:id="@+id/rl_base_title"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="18dp"
+            android:background="@color/transparent"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <ImageView
+                android:id="@+id/iv_base_back"
+                android:layout_width="54dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:src="@mipmap/icon_base_back_white" />
+
+            <TextView
+                android:id="@+id/tv_base_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                tools:text="标题" />
+
+            <!--右侧的图片的展示-->
+            <ImageView
+                android:id="@+id/iv_base_right"
+                android:layout_width="54dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"
+                android:visibility="gone"
+                tools:src="@mipmap/icon_base_back_white"
+                tools:visibility="visible" />
+
+            <!--右侧的文字的展示-->
+            <TextView
+                android:id="@+id/tv_base_right_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:padding="16dp"
+                android:src="@mipmap/icon_base_back_white"
+                android:text="测试"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <!--右侧自定义添加的图片,文字等-->
+            <FrameLayout
+                android:id="@+id/fl_base_right_more"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="54dp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#f5f5f5"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <!--子类位置-->
+        <FrameLayout
+            android:id="@+id/fl_base_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:id="@+id/tv_setting_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个性化广告推荐"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="230dp"
+            android:layout_height="34dp"
+            android:layout_below="@+id/tv_setting_hint"
+            android:layout_marginTop="4dp"
+            android:text="关闭后，您看到的广告数量不会减少，但是广告相关度会降低"
+            android:textColor="#BFBFC6"
+            android:textSize="12sp" />
+
+
+        <Switch
+            android:id="@+id/privacy_setting_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:thumb="@drawable/switch_thumb"
+            android:track="@drawable/switch_track"
+            tools:checked="true"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:id="@+id/tv_setting_hint2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个性化内容推荐"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="230dp"
+            android:layout_height="34dp"
+            android:layout_below="@+id/tv_setting_hint2"
+            android:layout_marginTop="4dp"
+            android:text="关闭后，系统无法根据您的阅读喜好为您推荐更感兴趣的音频内容"
+            android:textColor="#BFBFC6"
+            android:textSize="12sp" />
+
+
+        <Switch
+            android:id="@+id/privacy_setting_switch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:thumb="@drawable/switch_thumb"
+            android:track="@drawable/switch_track"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_privacy_third"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:drawableEnd="@mipmap/icon_arrow_gray"
+        android:drawablePadding="16dp"
+        android:minHeight="0dp"
+        android:padding="16dp"
+        android:text="第三方SDK"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp" />
+
+</LinearLayout>

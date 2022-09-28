@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:ignore="UsingOnClickInXml">
+
+    <RelativeLayout
+        android:id="@+id/rlRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rlWalletMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1B1926"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_16"
+            android:paddingEnd="@dimen/dp_16">
+
+            <TextView
+                android:id="@+id/tvWalletMoneyHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wallet_withdraw_money"
+                android:textColor="#6B6B7C"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tvWalletMoneyUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvWalletMoneyHint"
+                android:paddingTop="@dimen/dp_30"
+                android:paddingBottom="@dimen/dp_20"
+                android:src="@mipmap/wallet_withdraw_icon_close"
+                android:text="@string/wallet_withdraw_unit"
+                android:textColor="#9090AD"
+                android:textSize="@dimen/sp_24"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/etWalletMoney"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvWalletMoneyHint"
+                android:layout_toStartOf="@+id/ivWalletMoneyClose"
+                android:layout_toEndOf="@+id/tvWalletMoneyUnit"
+                android:background="@null"
+                android:hint="@string/wallet_withdraw_money_edit"
+                android:inputType="number"
+                android:maxLength="7"
+                android:onClick="onClick"
+                android:paddingTop="@dimen/dp_30"
+                android:paddingBottom="@dimen/dp_20"
+                android:textColor="#9090AD"
+                android:textSize="@dimen/sp_24" />
+
+            <ImageView
+                android:id="@+id/ivWalletMoneyClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvWalletMoneyHint"
+                android:layout_alignParentEnd="true"
+                android:onClick="onClick"
+                android:paddingStart="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_33"
+                android:paddingBottom="@dimen/dp_20"
+                android:src="@mipmap/wallet_withdraw_icon_close"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/viewLine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_below="@+id/etWalletMoney"
+                android:background="#232030" />
+
+            <TextView
+                android:id="@+id/tvWalletMoneySum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewLine"
+                android:paddingTop="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_16"
+                android:text="@string/wallet_withdraw_money_sum"
+                android:textColor="#84848F"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tvWalletMoneyAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewLine"
+                android:layout_alignParentEnd="true"
+                android:onClick="onClick"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_16"
+                android:text="@string/wallet_withdraw_money_all"
+                android:textColor="#CB508E"
+                android:textSize="@dimen/sp_12" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvWalletRuleHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlWalletMoney"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_14"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_14"
+            android:lineSpacingExtra="@dimen/dp_9"
+            android:text="@string/wallet_withdraw_ali_rule"
+            android:textColor="#CB508E"
+            android:textSize="@dimen/sp_12"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rlWalletAfterTaxMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvWalletRuleHint"
+            android:background="#1B1926"
+            android:padding="@dimen/dp_16">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wallet_xy_ml"
+                android:textColor="#84848F"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tvWalletMlCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/tvWalletYuan"
+                android:text="@string/wallet_top_up_item_money"
+                android:textColor="#CB508E"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/tvWalletYuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="@string/wallet_ml"
+                android:textColor="#84848F"
+                android:textSize="@dimen/sp_16" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlWalletPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlWalletAfterTaxMoney"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:background="#1B1926"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_20"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_20">
+
+            <LinearLayout
+                android:id="@+id/llAliPay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="onClick">
+
+                <ImageView
+                    android:id="@+id/ivAliPayCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/select_wallet_pay_checked" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_12"
+                    android:src="@mipmap/wallet_pay_ali" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llWxPay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:onClick="onClick">
+
+                <ImageView
+                    android:id="@+id/ivWxPayCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/select_wallet_pay_checked" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_12"
+                    android:src="@mipmap/wallet_pay_wx" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlWalletAliInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlWalletPay"
+            android:background="#1B1926"
+            android:onClick="onClick"
+            android:padding="@dimen/dp_16">
+
+            <ImageView
+                android:id="@+id/ivWalletAliSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/wallet_pay_ali_small" />
+
+            <TextView
+                android:id="@+id/tvWalletAliInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_toEndOf="@+id/ivWalletAliSmall"
+                android:textColor="#84848F"
+                android:textSize="@dimen/sp_14" />
+
+
+            <TextView
+                android:id="@+id/tvWalletAliBind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="@string/wallet_withdraw_ali_bind"
+                android:textColor="#84848F"
+                android:textSize="@dimen/sp_12" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlWalletWxInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlWalletAliInfo"
+            android:background="#1B1926"
+            android:onClick="onClick"
+            android:padding="@dimen/dp_16"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivWalletWxSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/wallet_pay_wx_small" />
+
+            <TextView
+                android:id="@+id/tvWalletWxInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_toEndOf="@+id/ivWalletWxSmall"
+                android:textColor="#84848F"
+                android:textSize="@dimen/sp_14" />
+
+
+            <TextView
+                android:id="@+id/tvWalletWxBind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="@string/wallet_withdraw_ali_bind"
+                android:textColor="#84848F"
+                android:textSize="@dimen/sp_12" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btWalletWithdraw"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:background="@drawable/select_wallet_bt"
+            android:onClick="onClick"
+            android:text="@string/wallet_withdraw"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+
+    </RelativeLayout>
+</ScrollView>

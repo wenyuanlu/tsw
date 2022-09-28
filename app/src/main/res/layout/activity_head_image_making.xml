@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/created_head_root_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/activity_headimage_making_bg">
+
+        <!--头像-->
+        <RelativeLayout
+            android:id="@+id/created_head_rl_base_title"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/created_head_iv_back"
+                android:layout_width="54dp"
+                android:layout_height="44dp"
+                android:layout_centerVertical="true"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:src="@mipmap/icon_base_back_white" />
+
+            <TextView
+                android:id="@+id/created_head_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                tools:text="标题" />
+        </RelativeLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/created_head_animation_hone_center"
+            android:layout_width="@dimen/dp_300"
+            android:layout_height="@dimen/dp_300"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_70"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/created_head_rl_base_title" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/created_head_animation_making"
+            android:layout_width="@dimen/dp_170"
+            android:layout_height="@dimen/dp_170"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/created_head_animation_hone_center"
+            app:layout_constraintEnd_toEndOf="@+id/created_head_animation_hone_center"
+            app:layout_constraintStart_toStartOf="@+id/created_head_animation_hone_center"
+            app:layout_constraintTop_toTopOf="@+id/created_head_animation_hone_center"
+            tools:visibility="visible" />
+
+        <com.maishuo.tingshuohenhaowan.widget.CircleImageView
+            android:id="@+id/created_head_cv_personal_head"
+            android:layout_width="@dimen/dp_170"
+            android:layout_height="@dimen/dp_170"
+            android:scaleType="centerCrop"
+            app:es_shape_type="round"
+            app:layout_constraintBottom_toBottomOf="@+id/created_head_animation_hone_center"
+            app:layout_constraintEnd_toEndOf="@+id/created_head_animation_hone_center"
+            app:layout_constraintStart_toStartOf="@+id/created_head_animation_hone_center"
+            app:layout_constraintTop_toTopOf="@+id/created_head_animation_hone_center" />
+
+        <TextView
+            android:id="@+id/created_head_tv_loading_text"
+            android:layout_width="@dimen/dp_200"
+            android:layout_height="@dimen/dp_42"
+            android:layout_marginTop="36dp"
+            android:gravity="center"
+            android:text="正在分析您的头像..."
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/created_head_animation_hone_center"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/created_head_tv_btn_comic"
+            android:layout_width="@dimen/dp_200"
+            android:layout_height="@dimen/dp_42"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/btn_of_headimage_making"
+            android:gravity="center"
+            android:text="制作动漫头像"
+            android:textColor="#A774ED"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/created_head_animation_hone_center" />
+
+        <TextView
+            android:id="@+id/created_head_tv_btn_used"
+            android:layout_width="@dimen/dp_200"
+            android:layout_height="@dimen/dp_42"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/btn_of_headimage_making"
+            android:gravity="center"
+            android:text="用作头像"
+            android:textColor="#A774ED"
+            android:textSize="@dimen/sp_14"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/created_head_animation_hone_center" />
+
+        <TextView
+            android:id="@+id/created_head_tv_btn_normal"
+            android:layout_width="@dimen/dp_200"
+            android:layout_height="@dimen/dp_42"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/btn_of_headimage_making"
+            android:gravity="center"
+            android:text="原图上传"
+            android:textColor="#A774ED"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/created_head_tv_btn_comic" />
+
+        <TextView
+            android:id="@+id/created_head_tv_btn_select"
+            android:layout_width="@dimen/dp_200"
+            android:layout_height="@dimen/dp_42"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/btn_of_headimage_making"
+            android:gravity="center"
+            android:text="重新选择"
+            android:textColor="#A774ED"
+            android:textSize="@dimen/sp_14"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/created_head_tv_btn_used" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

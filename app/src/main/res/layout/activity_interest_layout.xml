@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_interest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center"
+        android:text="选择你感兴趣的内容"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/tv_interest_one"
+                android:layout_width="@dimen/dp_86"
+                android:layout_height="@dimen/dp_86"
+                android:layout_marginLeft="@dimen/dp_158"
+                android:background="@drawable/select_interest"
+                android:gravity="center"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                android:visibility="invisible"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_interest_two"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_80"
+                android:layout_marginLeft="@dimen/dp_41"
+                android:layout_marginTop="@dimen/dp_45"
+                android:background="@drawable/select_interest"
+                android:gravity="center"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                android:visibility="invisible"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_interest_three"
+                android:layout_width="@dimen/dp_68"
+                android:layout_height="@dimen/dp_68"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_80"
+                android:layout_marginRight="@dimen/dp_28"
+                android:background="@drawable/select_interest"
+                android:gravity="center"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                android:visibility="invisible"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_interest_four"
+                android:layout_width="@dimen/dp_108"
+                android:layout_height="@dimen/dp_108"
+                android:layout_marginLeft="@dimen/dp_138"
+                android:layout_marginTop="@dimen/dp_120"
+                android:background="@drawable/select_interest"
+                android:gravity="center"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                android:visibility="invisible"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_interest_five"
+                android:layout_width="@dimen/dp_98"
+                android:layout_height="@dimen/dp_98"
+                android:layout_marginLeft="@dimen/dp_25"
+                android:layout_marginTop="@dimen/dp_167"
+                android:background="@drawable/select_interest"
+                android:gravity="center"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                android:visibility="invisible"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_interest_six"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_80"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_207"
+                android:layout_marginRight="@dimen/dp_29"
+                android:background="@drawable/select_interest"
+                android:gravity="center"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                android:visibility="invisible"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_interest_seven"
+                android:layout_width="@dimen/dp_141"
+                android:layout_height="@dimen/dp_141"
+                android:layout_marginLeft="@dimen/dp_97"
+                android:layout_marginTop="@dimen/dp_260"
+                android:background="@drawable/select_interest"
+                android:gravity="center"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                android:visibility="invisible"
+                tools:visibility="visible" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_interest_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_23"
+        android:layout_marginRight="@dimen/dp_23"
+        android:layout_marginBottom="@dimen/dp_40"
+        android:background="@drawable/shape_setting_bt"
+        android:text="完成"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14" />
+
+</LinearLayout>

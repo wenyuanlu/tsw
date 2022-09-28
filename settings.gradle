@@ -1,0 +1,8 @@
+include ':room'
+include ':share'
+include ':commonlibs'
+include ':retrofit'
+include ':faceplatform'
+include ':mp3recorder'
+include ':umeng'
+include ':app'

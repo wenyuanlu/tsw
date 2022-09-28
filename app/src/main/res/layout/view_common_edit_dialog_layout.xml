@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/rl_chat_dialog_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_dialog_common"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_24"
+        android:paddingRight="@dimen/dp_24"
+        android:paddingBottom="@dimen/dp_30">
+
+        <TextView
+            android:id="@+id/tv_dialog_common_edit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_24"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_126"
+            android:layout_marginTop="@dimen/dp_18">
+
+            <EditText
+                android:id="@+id/et_dialog_common_edit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_126"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="请输入您的举报原因，我们会尽快处理，谢谢！"
+                android:lineSpacingExtra="@dimen/dp_5"
+                android:text=""
+                android:textColor="@color/colorDialogCancel"
+                android:textColorHint="@color/colorDialogHint"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tv_dialog_common_edit_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/colorDialogHintNumber"
+                android:textSize="@dimen/sp_12"
+                android:visibility="gone"
+                tools:text="0/99" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_18"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/bt_dialog_common_edit_cancle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginRight="@dimen/dp_17"
+                android:layout_weight="1"
+                android:background="@drawable/shape_dialog_common_cancle"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/bt_dialog_common_edit_sure"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_17"
+                android:layout_weight="1"
+                android:background="@drawable/shape_dialog_common_sure"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>
+
+

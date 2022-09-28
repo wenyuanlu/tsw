@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp_20">
+
+        <RelativeLayout
+            android:id="@+id/rLayoutTopUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/wallet_top_up_bg">
+
+            <TextView
+                android:id="@+id/tvTopUpHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_16"
+                android:text="@string/wallet_wz"
+                android:textColor="#3D7F93"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvTopUpDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:paddingStart="@dimen/dp_30"
+                android:paddingTop="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_30"
+                android:text="@string/wallet_details"
+                android:textColor="#3D7F93"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvTopUpSum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTopUpHint"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_12"
+                android:text="@string/wallet_top_up_sum"
+                android:textColor="#2DA6CB"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/tvTopUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvTopUpSum"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:background="@drawable/solid_corners15_ffffff"
+                android:minWidth="@dimen/dp_0"
+                android:minHeight="@dimen/dp_0"
+                android:paddingStart="@dimen/dp_18"
+                android:paddingTop="5dp"
+                android:paddingEnd="@dimen/dp_18"
+                android:paddingBottom="5dp"
+                android:text="@string/wallet_top_up"
+                android:textColor="#50ABC7"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rLayoutTopDown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rLayoutTopUp"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@mipmap/wallet_withdraw_bg">
+
+            <TextView
+                android:id="@+id/tvWithdrawHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_16"
+                android:text="@string/wallet_ml"
+                android:textColor="#C66B6B"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvWithdrawDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:paddingStart="@dimen/dp_30"
+                android:paddingTop="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_30"
+                android:text="@string/wallet_details"
+                android:textColor="#C66B6B"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvWithdrawCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvWithdrawHint"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_12"
+                android:text="@string/wallet_ml_count"
+                android:textColor="#C66B6B"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/tvWithdrawSum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvWithdrawCount"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_4"
+                android:layout_toEndOf="@+id/tvWithdrawCount"
+                android:text="@string/wallet_withdraw_sum"
+                android:textColor="#C66B6B"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvWithdraw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvWithdrawCount"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:background="@drawable/solid_corners15_ffffff"
+                android:minWidth="@dimen/dp_0"
+                android:minHeight="@dimen/dp_0"
+                android:paddingStart="@dimen/dp_18"
+                android:paddingTop="5dp"
+                android:paddingEnd="@dimen/dp_18"
+                android:paddingBottom="5dp"
+                android:text="@string/wallet_withdraw"
+                android:textColor="#C66B6B"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mWithdrawGifLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rLayoutTopDown"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <ImageView
+                android:id="@+id/ivWithdrawGifView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+            <com.maishuo.tingshuohenhaowan.widget.StrokeTextView
+                android:id="@+id/tvWithdrawAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#ffde4d"
+                android:textSize="36dp"
+                android:textStyle="bold"
+                tools:text="15元" />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/qcad_barrage_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00616161">
+
+    <LinearLayout
+        android:id="@+id/qcad_barrage_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_barrage_click"
+        android:gravity="center_vertical"
+        android:paddingLeft="1dp"
+        android:paddingTop="3dp"
+        android:paddingRight="14dp"
+        android:paddingBottom="3dp">
+
+        <com.maishuo.tingshuohenhaowan.widget.CircleImageView
+            android:id="@+id/qcad_barrage_head"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            app:es_shape_type="round"
+            android:src="@drawable/barrage_head" />
+
+        <TextView
+            android:id="@+id/qcad_barrage_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

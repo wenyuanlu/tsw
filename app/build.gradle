@@ -1,0 +1,224 @@
+apply plugin: 'com.android.application'
+apply from: '../config.gradle'
+
+apply plugin: 'org.greenrobot.greendao'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'kotlin-kapt'
+
+android {
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    defaultConfig {
+        applicationId "com.maishuo.tingshuohenhaowan"
+        flavorDimensions "versionCode"
+        // 仅保留中文语种的资源
+        resConfigs 'zh'
+
+        //超过64K 支持分包
+        multiDexEnabled true
+        // 仅保留两种架构的 so 库，根据 Bugly 统计得出
+        ndk {
+//            abiFilters 'armeabi-v7a', 'x86', 'arm64-v8a', 'x86_64'
+            abiFilters 'armeabi-v7a', 'arm64-v8a'
+        }
+
+        // 混淆配置
+        proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-app.pro'
+        vectorDrawables.useSupportLibrary = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('tingshuohenhaowan.jks')
+            keyAlias '听说很好玩'
+            keyPassword 'Tingshuohenhaowan16888'
+            storePassword 'Tingshuohenhaowan16888'
+
+            //【重要】下面这两句必须要加，要不然会crash
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        debug {
+            storeFile file('tingshuohenhaowan.jks')
+            keyAlias '听说很好玩'
+            keyPassword 'Tingshuohenhaowan16888'
+            storePassword 'Tingshuohenhaowan16888'
+
+            //【重要】下面这两句必须要加，要不然会crash
+            v1SigningEnabled true
+            v2SigningEnabled false
+        }
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            jniDebuggable true
+            // 移除无用的资源文件
+            shrinkResources false
+            // ZipAlign 优化
+            zipAlignEnabled false
+            // 设置混淆
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+        }
+
+        release {
+            debuggable false
+            jniDebuggable false
+            // 移除无用的资源文件
+            shrinkResources false
+            // ZipAlign 优化
+            zipAlignEnabled true
+            // 设置混淆
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    packagingOptions {
+        // 剔除这个包下的所有文件（除了签名信息）
+        exclude 'META-INF/*******'
+        exclude 'AndroidManifest.xml'
+
+        //热云
+        doNotStrip "*/armeabi-v7a/*.so"
+        doNotStrip "*/x86/*.so"
+        doNotStrip "*/arm64-v8a/*.so"
+        doNotStrip "*/x86_64/*.so"
+        doNotStrip "armeabi.so"
+    }
+
+    //greendao本地数据库的配置
+    greendao {
+        //版本号，升级时可配置
+        schemaVersion 1
+        daoPackage 'com.maishuo.tingshuohenhaowan.greendao' // 设置DaoMaster、DaoSession、Dao包名
+        targetGenDir 'src/main/java'//设置DaoMaster、DaoSession、Dao目录
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    viewBinding {
+        enabled = true
+    }
+
+    // 多渠道打包
+    productFlavors {
+        yingyongbao {}
+//        xiaomi {}
+//        huawei {}
+//        oppo {}
+//        app_360 {}
+//        baidu {}
+//        vivo {}
+//        lenovo {}
+//        sougou {}
+//        ali {}
+//        meizu {}
+//        toutiao {}
+        productFlavors.all { flavor ->
+            flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+        }
+    }
+
+    //apk修改后的命名规则
+//    applicationVariants.all { variant ->
+//        def outputFileDir = "${project.projectDir.absolutePath}/${variant.buildType.name}/"
+//        def today = new Date()
+//        def releaseApkName = "tingshuowan" + "-" + variant.flavorName + "-" + buildType.name + "-" + today.format('yyyyMMddhhmm') + ".apk"
+//
+//        variant.outputs.all {
+//            outputFileName = releaseApkName
+//        }
+//
+//        variant.assemble.doLast {
+//            File out = new File(outputFileDir)
+//            copy {
+//                variant.outputs.forEach { file ->
+//                    copy {
+//                        from file.outputFile
+//                        into out
+//                    }
+//                }
+//            }
+//        }
+//    }
+
+//    //禁止png crunching， 禁止构建时默认压缩图片的方法
+//    aaptOptions {
+//        cruncherEnabled false
+//    }
+//
+//    // dex预处理和最多八线程
+//    dexOptions {
+//        preDexLibraries true
+//        maxProcessCount 8
+//    }
+//
+//    //关闭不需要task
+//    tasks.whenTaskAdded { task ->
+//        if (task.name.contains("lint")
+//                || task.name.contains("mockableAndroidJar")
+//                || task.name.contains("UnintTest")
+//                || task.name.contains("AndroidTest")
+//                || task.name.contains("Jni")
+//        ) {
+//            task.enabled = false
+//        }
+//    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    // 本地依赖加载
+    implementation project(':mp3recorder')
+    implementation project(':umeng')
+    implementation project(':faceplatform')
+    implementation project(':share')
+    implementation project(':room')
+
+    //retrofit
+    implementation project(':retrofit')
+
+    //gradle 依赖
+    implementation project(':commonlibs')
+
+    //声网聊天sdk
+    api files('libs/agora-rtm-sdk.jar')
+
+    //自己的广告sdk
+    implementation(name: 'com.corpize.sdk.ivoice_V1.1.1', ext: 'aar')
+
+    //获取oaid 移动广告联盟
+    implementation(name: 'oaid_sdk_1.0.26', ext: 'aar')
+
+    //支付宝支付
+    implementation(name: 'alipaysdk-noutdid-15.8.03.210428205839', ext: 'aar')
+
+    //ali oss
+    implementation(name: 'oss-android-sdk-2.9.2', ext: 'aar')
+
+    //热云埋点相关
+    implementation files('libs/tracking1.6.6.jar')
+    implementation files('libs/bcprov-jdk16-139.jar')
+
+}

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:id="@+id/recyclerView_recorder_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+
+        <LinearLayout
+            android:id="@+id/relativelayout_recorder_start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="30dp"
+            android:visibility="visible">
+
+            <!-- 开始录制 -->
+            <ImageView
+                android:id="@+id/iv_publish_tag_up"
+                android:layout_width="@dimen/dp_180"
+                android:layout_height="@dimen/dp_46"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitXY"
+                android:src="@mipmap/recording_button_uploading_voice" />
+
+            <!-- 录制帮助 -->
+            <TextView
+                android:id="@+id/tv_howtouser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_15"
+                android:text="如何上传"
+                android:textColor="#FFD6D6DD"
+                android:textSize="@dimen/sp_12" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativelayout_recorder_end"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30dp"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <ImageView
+                android:id="@+id/iv_up_ok"
+                android:layout_width="@dimen/dp_62"
+                android:layout_height="@dimen/dp_62"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/recording_button_suspended" />
+
+            <TextView
+                android:id="@+id/tv_recorder_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_up_ok"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="00:00"
+                android:textColor="#FFBFBFC6"
+                android:textSize="@dimen/sp_12" />
+
+            <LinearLayout
+                android:id="@+id/line_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_50"
+                android:layout_toLeftOf="@id/iv_up_ok"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/recording_icon_retake" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:text="重录"
+                    android:textColor="#FFD6D6DD"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/line_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_50"
+                android:layout_toRightOf="@id/iv_up_ok"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/recording_icon_music" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:text="配乐"
+                    android:textColor="#FFD6D6DD"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/custom_recorder_selector_file_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <include
+                android:id="@+id/custom_recorder_selector_file_include"
+                layout="@layout/view_recorder_selector_file_layout" />
+        </FrameLayout>
+    </FrameLayout>
+</layout>

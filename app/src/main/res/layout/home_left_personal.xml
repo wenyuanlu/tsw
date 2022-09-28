@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#111114"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_10"
+    android:paddingTop="50dp"
+    android:paddingRight="@dimen/dp_10">
+
+    <include layout="@layout/view_left_personal_header_layout" />
+
+    <include layout="@layout/view_left_user_info_layout" />
+
+    <!--banner的展示-->
+    <com.maishuo.tingshuohenhaowan.widget.CustomBannerView
+        android:id="@+id/banner_personal"
+        android:layout_width="match_parent"
+        android:layout_height="80dp" />
+
+    <!--发布喜欢的展示-->
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/magic_indicator_personal"
+        android:layout_width="match_parent"
+        android:layout_height="31dp"
+        android:layout_marginTop="@dimen/dp_14" />
+
+    <com.maishuo.tingshuohenhaowan.main.view.CustomViewPager
+        android:id="@+id/vp_personal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_24" />
+</LinearLayout>

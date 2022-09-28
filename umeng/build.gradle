@@ -1,0 +1,26 @@
+apply plugin: 'com.android.library'
+apply from: '../config.gradle'
+
+android {
+
+    defaultConfig {
+        consumerProguardFiles 'proguard-umeng.pro'
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+}
+
+dependencies {
+    // 依赖 libs 目录下所有 aar 包
+    api fileTree(include: ['*.aar'], dir: 'libs')
+    // 依赖 libs 目录下所有 jar 包
+    api fileTree(include: ['*.jar'], dir: 'libs')
+
+    //gradle 依赖
+    implementation project(':commonlibs')
+}

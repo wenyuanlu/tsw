@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/barrage_ll_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_shape_barrage"
+        android:gravity="center"
+        android:paddingStart="1dp"
+        android:paddingTop="3dp"
+        android:paddingRight="14dp"
+        android:paddingBottom="3dp">
+
+        <com.maishuo.tingshuohenhaowan.widget.CircleImageView
+            android:id="@+id/barrage_iv_head"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/barrage_head"
+            app:es_shape_type="round" />
+
+        <TextView
+            android:id="@+id/barrage_tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,111 @@
+apply plugin: 'com.android.library'
+apply from: '../config.gradle'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'kotlin-kapt'
+
+android {
+    defaultConfig {
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    api 'com.github.bumptech.glide:glide:4.12.0'
+    api 'com.github.bumptech.glide:annotations:4.12.0'
+    api "com.github.bumptech.glide:okhttp3-integration:4.12.0"
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    api 'com.google.code.gson:gson:2.8.6'
+
+    // ViewPager
+    api 'com.romandanylyk:pageindicatorview:1.0.3'
+
+    // Bugly 异常捕捉
+    api 'com.tencent.bugly:crashreport:3.4.4'
+    api 'com.tencent.bugly:nativecrashreport:3.9.2'
+
+    // 上拉刷新下拉加载
+    api 'com.scwang.smart:refresh-layout-kernel:2.0.3'      //核心必须依赖
+    api 'com.scwang.smart:refresh-header-classics:2.0.3'    //经典刷新头
+
+    api 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    api 'org.greenrobot:eventbus:3.2.0'
+
+    //音乐播放器
+    api 'com.google.android.exoplayer:exoplayer-core:2.10.4'
+    api 'com.google.android.exoplayer:exoplayer-dash:2.10.4'
+    api 'com.google.android.exoplayer:exoplayer-ui:2.10.4'
+
+    //数据库
+    api 'org.greenrobot:greendao:3.3.0'
+
+    //lottie播放json动画
+    api 'com.airbnb.android:lottie:3.7.0'
+
+    //图片选择控件
+    api 'io.github.lucksiege:pictureselector:v2.7.3-rc03'
+
+    //图片压缩
+    api 'top.zibin:Luban:1.1.8'
+
+    api 'com.teprinciple:updateapputilsx:2.3.0'
+
+    api 'com.danikula:videocache:2.7.1'
+
+    //加载svga
+    api 'com.github.yyued:SVGAPlayer-Android:2.5.15'
+    //文件下载
+    api 'com.liulishuo.filedownloader:library:1.7.7'
+
+    //banner滚动展示
+    api 'io.github.youth5201314:banner:2.2.2'
+
+    //二维码扫描
+    api 'com.journeyapps:zxing-android-embedded:3.6.0'
+
+    //高德地图
+    compileOnly 'com.amap.api:location:5.2.0'
+
+    //baseRecyclerViewAdapter
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.6'
+
+    // 沉浸式状态栏和沉浸式导航栏管理
+    api "com.gyf.immersionbar:immersionbar:3.0.0"
+    api "com.gyf.immersionbar:immersionbar-components:3.0.0"
+    api "com.gyf.immersionbar:immersionbar-ktx:3.0.0"
+
+    //retrofit
+    api "com.squareup.retrofit2:retrofit:2.9.0"
+    api "com.squareup.retrofit2:converter-gson:2.9.0"
+    api "com.squareup.retrofit2:adapter-rxjava2:2.9.0"
+
+    //okhttp
+    api "com.squareup.okhttp3:okhttp:4.9.1"
+    //okhttp的log信息
+    api 'com.squareup.okhttp3:logging-interceptor:4.9.1'
+
+    //rxjava
+    api "io.reactivex.rxjava3:rxjava:3.0.13"
+    api "io.reactivex.rxjava2:rxandroid:2.1.1"
+
+    // noinspection GradleDependency
+    api 'androidx.lifecycle:lifecycle-common:2.1.0'
+    // noinspection GradleDependency
+    api 'androidx.lifecycle:lifecycle-runtime:2.1.0'
+
+    api 'androidx.lifecycle:lifecycle-runtime-ktx:2.2.0'//lifecycleScope
+    api 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'//viewModelScope
+
+    //magicindicator
+    api 'com.github.hackware1993:MagicIndicator:1.7.0'
+
+    //省市区选择
+    api 'com.github.crazyandcoder:citypicker:6.0.2'
+
+}

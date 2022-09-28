@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_chat_hint"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_42"
+        android:background="@color/chat_tip_background_hint"
+        android:gravity="center"
+        android:text="聊天如涉及转账借钱、赌博理财等诱惑违法行为请警惕"
+        android:textColor="@color/chat_tip_hint"
+        android:textSize="@dimen/sp_12" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/chat_bg" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/rl_chat_record_show"
+            android:layout_width="@dimen/dp_140"
+            android:layout_height="@dimen/dp_66"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp_90"
+            android:background="@drawable/shape_chat_record"
+            android:visibility="gone">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animation_chat_record_show"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingLeft="@dimen/dp_24"
+                android:paddingRight="@dimen/dp_24"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="chat_record.json"
+                app:lottie_loop="true" />
+
+        </RelativeLayout>
+
+        <!--礼物位置-->
+        <com.maishuo.tingshuohenhaowan.gift.sideslipgift.RewardLayout
+            android:id="@+id/ll_gift_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            app:gift_item_layout="@layout/gift_animation_item"
+            app:max_gift="3" />
+
+        <!--特效动画svga位置-->
+        <com.opensource.svgaplayer.SVGAImageView
+            android:id="@+id/svga_gift"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#0000"
+            app:autoPlay="true"
+            app:clearsAfterStop="true"
+            app:loopCount="1" />
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#4DFFFFFF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_49"
+        android:orientation="horizontal">
+
+        <!--图片-->
+        <LinearLayout
+            android:id="@+id/ll_chat_select_pic"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp_34"
+                android:layout_height="@dimen/dp_34"
+                android:src="@mipmap/chat_lable_icon_pic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="图片"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_10" />
+
+        </LinearLayout>
+
+        <!--录音-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_chat_record"
+                android:layout_width="@dimen/dp_58"
+                android:layout_height="@dimen/dp_30"
+                android:src="@mipmap/chat_lable_icon_voice" />
+
+        </LinearLayout>
+
+        <!--打赏-->
+        <LinearLayout
+            android:id="@+id/iv_chat_select_gift"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp_34"
+                android:layout_height="@dimen/dp_34"
+                android:src="@mipmap/chat_lable_icon_exceptional" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="打赏"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_10" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

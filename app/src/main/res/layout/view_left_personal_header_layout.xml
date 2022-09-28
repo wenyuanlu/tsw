@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--头像名称设置等展示-->
+    <RelativeLayout
+        android:id="@+id/rl_personal_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_66">
+
+        <!--头像-->
+        <com.maishuo.tingshuohenhaowan.widget.CircleImageView
+            android:id="@+id/iv_personal_head"
+            app:es_shape_type="round"
+            android:layout_width="@dimen/dp_66"
+            android:layout_height="@dimen/dp_66"
+            android:scaleType="centerCrop" />
+
+        <!--vip-->
+        <RelativeLayout
+            android:id="@+id/rl_personal_vip"
+            android:layout_width="@dimen/dp_31"
+            android:layout_height="@dimen/dp_31"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_43">
+
+            <ImageView
+                android:id="@+id/iv_personal_vip"
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:src="@mipmap/me_icon_vip_close" />
+
+        </RelativeLayout>
+
+        <!--设置按钮-->
+        <ImageView
+            android:id="@+id/iv_personal_setting"
+            android:layout_width="@dimen/dp_29"
+            android:layout_height="@dimen/dp_34"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="@dimen/dp_5"
+            android:paddingTop="@dimen/dp_10"
+            android:src="@mipmap/me_icon_set" />
+
+        <!--姓名和钱包-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toLeftOf="@+id/iv_personal_setting"
+            android:layout_toRightOf="@+id/rl_personal_vip"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_personal_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_18" />
+
+            <TextView
+                android:id="@+id/tv_personal_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dp"
+                android:paddingBottom="@dimen/dp_6"
+                android:text="查看我的钱包>>"
+                android:textColor="#D6D6DD"
+                android:textSize="@dimen/sp_12" />
+        </LinearLayout>
+    </RelativeLayout>
+</merge>

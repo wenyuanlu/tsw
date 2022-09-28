@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.maishuo.tingshuohenhaowan.setting.model.UserPersonalEditViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_64"
+            android:onClick="@{()->viewmodel.openSelectorPic()}">
+
+            <TextView
+                style="@style/settingStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="头像" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/user_personal_edit_header"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_20"
+                android:onClick="@{()->viewmodel.openBigPic()}"
+                android:src="@drawable/_xpopup_round3_bg"
+                tools:ignore="RtlHardcoded" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_64"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/settingStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/nick_name" />
+
+            <EditText
+                android:id="@+id/user_personal_edit_nick"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_14"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableRight="@mipmap/icon_arrow_gray"
+                android:drawablePadding="@dimen/dp_14"
+                android:gravity="center|right"
+                android:hint="@string/nick_name"
+                android:inputType="text"
+                android:maxLength="8"
+                android:textColor="@color/FFBFBFC6"
+                android:textSize="@dimen/sp_12"
+                android:visibility="visible"
+                tools:text="默认默认" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_64"
+            android:gravity="center_vertical"
+            android:onClick="@{()->viewmodel.openSelectorSex()}">
+
+            <TextView
+                style="@style/settingStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/sex" />
+
+            <TextView
+                android:id="@+id/user_personal_edit_sex"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_weight="1"
+                android:drawableRight="@mipmap/icon_arrow_gray"
+                android:drawablePadding="@dimen/dp_14"
+                android:gravity="center|right"
+                android:hint="@string/please_select_sex"
+                android:textColor="@color/FFBFBFC6"
+                android:textSize="@dimen/sp_12"
+                android:visibility="visible"
+                tools:ignore="UseCompatTextViewDrawableXml"
+                tools:text="女" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_64"
+            android:gravity="center_vertical"
+            android:onClick="@{()->viewmodel.openSelectorAge()}">
+
+            <TextView
+                style="@style/settingStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/birthday" />
+
+            <TextView
+                android:id="@+id/user_personal_edit_age"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_14"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_weight="1"
+                android:drawableRight="@mipmap/icon_arrow_gray"
+                android:drawablePadding="@dimen/dp_14"
+                android:enabled="false"
+                android:gravity="center|right"
+                android:textColor="@color/FFBFBFC6"
+                android:textSize="@dimen/sp_12"
+                tools:text="1991-01-02" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_address"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_64"
+            android:gravity="center_vertical"
+            android:onClick="@{()->viewmodel.openSelectorAddress()}">
+
+            <TextView
+                style="@style/settingStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/address" />
+
+            <TextView
+                android:id="@+id/user_personal_edit_address"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_14"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_weight="1"
+                android:drawableRight="@mipmap/icon_arrow_gray"
+                android:drawablePadding="@dimen/dp_14"
+                android:gravity="center|right"
+                android:textColor="@color/FFBFBFC6"
+                android:textSize="@dimen/sp_12"
+                android:visibility="visible"
+                tools:ignore="UseCompatTextViewDrawableXml"
+                tools:text="某某地区" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

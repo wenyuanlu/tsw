@@ -1,0 +1,6 @@
+<resources>
+
+  <item name="vertical_image_id" type="id" />
+  <item name="vertical_text_id" type="id" />
+
+</resources>

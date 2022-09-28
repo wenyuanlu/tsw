@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/message_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_message_background"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dp_68">
+
+    <TextView
+        android:id="@+id/test_textview_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingTop="@dimen/dp_38"
+        android:paddingBottom="20dp"
+        android:text="消息"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.maishuo.tingshuohenhaowan.widget.MessageHeadView
+            android:id="@+id/message_friend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            app:headHeight="@dimen/dp_44"
+            app:headMarginTop="2dp"
+            app:headWidth="@dimen/dp_44"
+            app:messageSize="@dimen/dp_16"
+            app:showTitle="true"
+            app:titleName="好友"
+            app:topImage="@mipmap/message_icon_friends">
+
+        </com.maishuo.tingshuohenhaowan.widget.MessageHeadView>
+
+        <com.maishuo.tingshuohenhaowan.widget.MessageHeadView
+            android:id="@+id/message_praise"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            app:headHeight="@dimen/dp_44"
+            app:headMarginTop="2dp"
+            app:headWidth="@dimen/dp_44"
+            app:messageSize="@dimen/dp_16"
+            app:showTitle="true"
+            app:titleName="获赞"
+            app:topImage="@mipmap/message_icon_praise">
+
+        </com.maishuo.tingshuohenhaowan.widget.MessageHeadView>
+
+        <com.maishuo.tingshuohenhaowan.widget.MessageHeadView
+            android:id="@+id/message_barrage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            app:headHeight="@dimen/dp_44"
+            app:headMarginTop="2dp"
+            app:headWidth="@dimen/dp_44"
+            app:messageSize="@dimen/dp_16"
+            app:showTitle="true"
+            app:titleName="弹幕"
+            app:topImage="@mipmap/message_icon_barrage">
+
+        </com.maishuo.tingshuohenhaowan.widget.MessageHeadView>
+
+        <com.maishuo.tingshuohenhaowan.widget.MessageHeadView
+            android:id="@+id/message_system_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            app:headHeight="@dimen/dp_44"
+            app:headWidth="@dimen/dp_44"
+            app:messageSize="@dimen/dp_10"
+            app:showTitle="true"
+            app:titleName="系统通知"
+            app:topImage="@mipmap/message_icon_notice">
+        </com.maishuo.tingshuohenhaowan.widget.MessageHeadView>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_chat_list_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="聊天列表"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.qichuang.commonlibs.widgets.refresh.CommonRefreshView
+            android:id="@+id/refreshLayout_my_message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_my_message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.qichuang.commonlibs.widgets.refresh.CommonRefreshView>
+    </RelativeLayout>
+</LinearLayout>

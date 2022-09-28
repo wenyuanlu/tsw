@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="UsingOnClickInXml">
+
+    <RelativeLayout
+        android:id="@+id/rlRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/llWalletTopUpVip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_2">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/wallet_top_up_vip" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_3"
+                android:src="@mipmap/wallet_top_up_question" />
+
+        </LinearLayout>
+
+        <com.maishuo.tingshuohenhaowan.widget.recyclerview.RefreshView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llWalletTopUpVip"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_8" />
+
+        <LinearLayout
+            android:id="@+id/llAliPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recyclerView"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_27"
+            android:gravity="center"
+            android:onClick="onClick">
+
+            <ImageView
+                android:id="@+id/ivAliPayCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/select_wallet_pay_checked" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_3"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:src="@mipmap/wallet_pay_ali" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llWxPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recyclerView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/dp_27"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:gravity="center"
+            android:onClick="onClick">
+
+            <ImageView
+                android:id="@+id/ivWxPayCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/select_wallet_pay_checked" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_3"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:src="@mipmap/wallet_pay_wx" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewLine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_below="@+id/llWxPay"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_25"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_25"
+            android:background="#232030" />
+
+        <TextView
+            android:id="@+id/tvTopUpExplain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewLine"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_47"
+            android:text="@string/wallet_top_up_explain"
+            android:textColor="#ff84848f"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvTopUpExplainContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTopUpExplain"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginEnd="@dimen/dp_47"
+            android:lineSpacingExtra="@dimen/dp_12"
+            android:text="@string/wallet_top_up_explain_content"
+            android:textColor="#ff84848f"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btWalletTopUp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:layout_below="@+id/tvTopUpExplainContent"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/dp_16"
+            android:background="@drawable/select_wallet_bt"
+            android:onClick="onClick"
+            android:text="@string/wallet_top_up"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+
+    </RelativeLayout>
+</ScrollView>

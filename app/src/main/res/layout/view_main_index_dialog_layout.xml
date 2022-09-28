@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@color/red">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_index_course_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/guide12" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_index_center_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_index_course_center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_80"
+            android:scaleType="fitXY"
+            android:src="@mipmap/guide1_next" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_index_course_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="50dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/guide21"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_index_course_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/main_index_course_bottom"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp_40"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/guide2_complete"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </RelativeLayout>
+</layout>

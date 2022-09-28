@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#171520">
+
+        <ImageView
+            android:id="@+id/iv_recorder_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/recorder_main_center_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="130dp">
+
+            <include
+                android:id="@+id/activity_recorder_center_include_layout"
+                layout="@layout/activity_recorder_center_layout" />
+
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            android:id="@+id/recorder_main_title_include_layout"
+            layout="@layout/activity_recorder_title_layout" />
+
+        <LinearLayout
+            android:id="@+id/recorder_main_bottom_include_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/drawable_000000_0_100_shape" />
+
+            <include
+                android:id="@+id/recorder_main_bottom_include"
+                layout="@layout/activity_recorder_bottom_layout" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

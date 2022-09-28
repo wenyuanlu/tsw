@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="dialog"
+            type="com.maishuo.sharelibrary.CustomShareDialog" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/share_root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#151418"
+        android:orientation="vertical">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="4"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <com.maishuo.sharelibrary.VerticalItemView
+                android:id="@+id/weixin_layout"
+                android:layout_columnWeight="1"
+                android:onClick="@{()->dialog.sendWechatMessage()}"
+                app:icon="@drawable/icon_weixinx"
+                app:iconHeight="42dp"
+                app:iconWidth="42dp"
+                app:infoText="微信"
+                app:infoTextColor="#666666"
+                app:infoTextMarginTop="12dp"
+                app:infoTextSize="14sp" />
+
+            <com.maishuo.sharelibrary.VerticalItemView
+                android:id="@+id/moment_layout"
+                android:layout_columnWeight="1"
+                android:onClick="@{()->dialog.sendWechatMomentsMessage()}"
+                app:icon="@mipmap/icon_circle_of_friends"
+                app:iconHeight="42dp"
+                app:iconWidth="42dp"
+                app:infoText="朋友圈"
+                app:infoTextColor="#666666"
+                app:infoTextMarginTop="12dp"
+                app:infoTextSize="14sp" />
+
+            <com.maishuo.sharelibrary.VerticalItemView
+                android:id="@+id/qq_layout"
+                android:layout_columnWeight="1"
+                android:onClick="@{()->dialog.sendQQMessage()}"
+                app:icon="@mipmap/icon_qq"
+                app:iconHeight="42dp"
+                app:iconWidth="42dp"
+                app:infoText="QQ"
+                app:infoTextColor="#666666"
+                app:infoTextMarginTop="12dp"
+                app:infoTextSize="14sp" />
+
+            <com.maishuo.sharelibrary.VerticalItemView
+                android:id="@+id/qzone_layout"
+                android:layout_columnWeight="1"
+                android:onClick="@{()->dialog.sendQZoneMessage()}"
+                app:icon="@mipmap/icon_qqkongjian"
+                app:iconHeight="42dp"
+                app:iconWidth="42dp"
+                app:infoText="QQ空间"
+                app:infoTextColor="#666666"
+                app:infoTextMarginTop="12dp"
+                app:infoTextSize="14sp" />
+
+            <com.maishuo.sharelibrary.VerticalItemView
+                android:id="@+id/sina_layout"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="15dp"
+                android:onClick="@{()->dialog.sendWeiBoMessage()}"
+                app:icon="@drawable/icon_weibox"
+                app:iconHeight="42dp"
+                app:iconWidth="42dp"
+                app:infoText="微博"
+                app:infoTextColor="#666666"
+                app:infoTextMarginTop="12dp"
+                app:infoTextSize="14sp" />
+
+            <com.maishuo.sharelibrary.VerticalItemView
+                android:id="@+id/del_layout"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="15dp"
+                android:onClick="@{()->dialog.onDelListener()}"
+                android:visibility="gone"
+                app:icon="@mipmap/share_bounced_icon_delete"
+                app:iconHeight="42dp"
+                app:iconWidth="42dp"
+                app:infoText="删除"
+                app:infoTextColor="#666666"
+                app:infoTextMarginTop="12dp"
+                app:infoTextSize="14sp"
+                tools:visibility="visible" />
+
+            <com.maishuo.sharelibrary.VerticalItemView
+                android:id="@+id/mycircle_layout"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="15dp"
+                android:onClick="@{()->dialog.myMoments()}"
+                android:visibility="gone"
+                app:icon="@mipmap/icon_me"
+                app:iconHeight="42dp"
+                app:iconWidth="42dp"
+                app:infoText="我的圈子"
+                app:infoTextColor="#666666"
+                app:infoTextMarginTop="12dp"
+                app:infoTextSize="14sp"
+                tools:visibility="visible" />
+
+            <com.maishuo.sharelibrary.VerticalItemView
+                android:id="@+id/share_report"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="15dp"
+                android:onClick="@{()->dialog.onReport()}"
+                android:visibility="gone"
+                app:icon="@mipmap/icon_report"
+                app:iconHeight="42dp"
+                app:iconWidth="42dp"
+                app:infoText="举报"
+                app:infoTextColor="#666666"
+                app:infoTextMarginTop="12dp"
+                app:infoTextSize="14sp"
+                tools:visibility="visible" />
+
+            <com.maishuo.sharelibrary.VerticalItemView
+                android:id="@+id/share_download"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:onClick="@{()->dialog.onDownLoad()}"
+                android:visibility="gone"
+                app:icon="@mipmap/icon_dl"
+                app:iconHeight="42dp"
+                app:iconWidth="42dp"
+                app:infoText="下载"
+                app:infoTextColor="#333333"
+                app:infoTextMarginTop="12dp"
+                app:infoTextSize="14sp"
+                tools:visibility="visible" />
+
+        </GridLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#f5f5f5"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/share_tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="@{()->dialog.dismiss()}"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:text="取消"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </LinearLayout>
+</layout>

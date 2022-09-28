@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1B1926"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_16">
+
+        <TextView
+            android:id="@+id/tvBindAliName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_16"
+            android:text="@string/wallet_withdraw_bind_ali_name"
+            android:textColor="#9090AD"
+            android:textSize="@dimen/sp_14" />
+
+        <EditText
+            android:id="@+id/etBindAliName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/tvBindAliName"
+            android:background="@null"
+            android:hint="@string/wallet_withdraw_bind_ali_name_hint"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="@dimen/dp_16"
+            android:textColor="#9090AD"
+            android:textSize="@dimen/sp_14" />
+
+        <View
+            android:id="@+id/viewLine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_below="@+id/etBindAliName"
+            android:layout_alignStart="@+id/etBindAliName"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:background="#232030" />
+
+        <TextView
+            android:id="@+id/tvBindAliAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewLine"
+            android:paddingTop="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_16"
+            android:text="@string/wallet_withdraw_bind_ali_account"
+            android:textColor="#9090AD"
+            android:textSize="@dimen/sp_14" />
+
+        <EditText
+            android:id="@+id/etBindAliAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewLine"
+            android:layout_toEndOf="@+id/tvBindAliName"
+            android:background="@null"
+            android:hint="@string/wallet_withdraw_bind_ali_account_hint"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="@dimen/dp_16"
+            android:textColor="#9090AD"
+            android:textSize="@dimen/sp_14" />
+
+        <View
+            android:id="@+id/viewLine1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_below="@+id/etBindAliAccount"
+            android:layout_alignStart="@+id/etBindAliAccount"
+            android:layout_marginStart="@dimen/dp_16"
+            android:background="#232030" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btWalletBindSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:background="@drawable/select_wallet_bt"
+        android:text="@string/wallet_withdraw_bind_ali_save"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_47"
+        android:text="@string/wallet_withdraw_bind_ali_remind"
+        android:textColor="#ff84848f"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginEnd="@dimen/dp_47"
+        android:lineSpacingExtra="@dimen/dp_12"
+        android:text="@string/wallet_withdraw_bind_ali_remind_content"
+        android:textColor="#ff84848f"
+        android:textSize="12sp" />
+
+</LinearLayout>

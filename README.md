@@ -1,2 +1,0 @@
-# tsw
-tsw-android

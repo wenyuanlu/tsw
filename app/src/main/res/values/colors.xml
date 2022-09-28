@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App 样式中引用的颜色 -->
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorPrimaryDark">@color/black</color>
+    <color name="colorAccent">#5A8DDF</color>
+    <color name="windowBackground">#000000</color>
+    <color name="textColor">#333333</color>
+    <color name="textColorHint">#757575</color>
+
+    <!-- 按钮按压时的颜色 -->
+    <color name="colorButtonPressed">#AA5A8DDF</color>
+    <!-- 按钮禁用时的颜色 -->
+    <color name="colorButtonDisable">#BBBBBB</color>
+    <!-- 分割线的颜色 -->
+    <color name="colorLine">#ECECEC</color>
+    <!-- 图标颜色 -->
+    <color name="colorIcon">#7C7C7C</color>
+
+    <!-- 对话框确认按钮文本颜色 -->
+    <color name="colorConfirm">#007AFF</color>
+    <!-- 对话框取消按钮文本颜色 -->
+    <color name="colorCancel">#F44336</color>
+    <!-- 通用对话框背景色 -->
+    <color name="colorDialogBackground">#1D1A5F</color>
+    <!-- 通用对话框确认按钮文本颜色 -->
+    <color name="colorDialogConfirm">#FF42A1</color>
+    <!-- 通用对话框取消按钮文本颜色 -->
+    <color name="colorDialogCancel">#D6D6DD</color>
+    <!-- 通用对话框提示文本颜色 -->
+    <color name="colorDialogHint">#D6D6DD</color>
+    <!-- 通用对话框提示字数文本颜色 -->
+    <color name="colorDialogHintNumber">#5F5C95</color>
+
+    <color name="color_link">#FFDDA4</color>
+    <color name="color_bg_theme">#161924</color>
+    <color name="loginBg">#121425</color>
+    <color name="loginCenterBg">#1E1F31</color>
+    <color name="loginEditTextColor">#525361</color>
+    <color name="loginGetCode">#FFD6D6DD</color>
+    <color name="loginAgree">#FF525361</color>
+    <color name="loginAgree2">#FF7578A1</color>
+    <color name="settings_little_line_color">#f5f5f5</color>
+
+    <!--默认图片(头像等)加载的背景颜色-->
+    <color name="head_background_default">#FF2B283A</color>
+    <color name="pic_background_default">#FF2B283A</color>
+
+    <!--聊天相关-->
+    <color name="black_message_count">#FF100D1F</color>
+    <color name="black_message_background">#FF171520</color>
+    <color name="gray_message_last">#FF84848F</color>
+    <color name="gray_message_time">#FF60606A</color>
+    <color name="red_message_delete">#FFFF0051</color>
+    <color name="red_message_count">#FFF03D73</color>
+
+    <!--聊天中颜色-->
+    <color name="chat_time_item">#C07775</color>
+    <color name="chat_text_item">#DDDDDD</color>
+    <color name="chat_text_item_top">#84848F</color>
+    <color name="chat_text_background_item">#2E2C36</color>
+    <color name="chat_record_json">#222128</color>
+    <color name="chat_tip_hint">#FFFF87BC</color>
+    <color name="chat_tip_back_hint">#FFB34A7F</color>
+    <color name="chat_tip_background_hint">#FF1D1D1D</color>
+    <color name="chat_status_unread">#FFA4A2</color>
+    <color name="chat_gift">#FFFF42A1</color>
+
+    <!--图片选择器中控件-->
+    <color name="select_pic_bar_grey">#0C0909</color>
+    <color name="select_pic_grey">#9e9e9e</color>
+    <color name="select_pic_disableColor">#cecece</color>
+    <color name="select_pic_container_background">#000000</color>
+    <color name="select_pic_alpha_black">#44000000</color>
+    <color name="select_picture_color_grey">#393a3e</color>
+    <color name="protocol_dialog">#FFFF42A1</color>
+    <color name="protocol_dialog_bg">#FF1D1A5F</color>
+    <color name="ff84848f">#FF84848F</color>
+    <color name="ff151418">#FF151418</color>
+    <color name="ffD2D2D2">#FFD2D2D2</color>
+    <color name="ffff66B9">#FFFF66B9</color>
+
+    <!--礼物相关图片颜色-->
+
+    <!--个人中心相关-->
+    <color name="FFD6D6DD">#FFD6D6DD</color>
+    <color name="FF84848F">#FF84848F</color>
+
+    <!--搜索页面相关-->
+    <color name="FF202125">#FF202125</color>
+    <color name="FFBBBBBB">#FFBBBBBB</color>
+    <color name="FFBFBFC6">#FFBFBFC6</color>
+
+    <!--vip相关-->
+    <color name="FFEBD4AA">#FFEBD4AA</color>
+    <color name="FFC48E2C">#FFC48E2C</color>
+    <color name="FFE4C181">#FFE4C181</color>
+
+    <color name="FFFF87BC">#FFFF87BC</color>
+    <color name="FF5064FF">#FF5064FF</color>
+    <color name="FF232030">#FF232030</color>
+    <color name="FF262334">#FF262334</color>
+    <color name="FF999999">#FF999999</color>
+    <color name="FFD674A7">#FFD674A7</color>
+    <color name="FF482836">#FF482836</color>
+    <color name="FF9A4A6E">#FF9A4A6E</color>
+    <color name="splash_backgroud_color">#171616</color>
+    <color name="color_8a6bff">#8a6bff</color>
+
+
+</resources>

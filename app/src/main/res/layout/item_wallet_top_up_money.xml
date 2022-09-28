@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlItemTopUp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/select_wallet_top_up_money">
+
+    <TextView
+        android:id="@+id/tvItemMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_18"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:text="@string/wallet_top_up_item_money"
+        android:textColor="#FFD6D6DD"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvItemMoney"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ivItemDiamond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/wallet_top_up_diamond" />
+
+        <TextView
+            android:id="@+id/tvItemDiamond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_2"
+            android:layout_marginEnd="@dimen/dp_2"
+            android:text="@string/wallet_top_up_item_diamond"
+            android:textColor="#999999"
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/tvItemFreeDiamond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FF42A1"
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_first_pay_index"
+        android:layout_width="@dimen/dp_54"
+        android:layout_height="@dimen/dp_18"
+        android:layout_alignParentEnd="true"
+        android:src="@mipmap/recharge_label_first"
+        android:visibility="gone" />
+
+</RelativeLayout>

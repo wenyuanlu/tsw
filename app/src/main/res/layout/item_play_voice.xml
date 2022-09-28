@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fl_ad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/rl_normal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--大背景图-->
+        <ImageView
+            android:id="@+id/iv_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:alpha="0.7"
+            android:scaleType="centerCrop" />
+
+        <!--全屏点赞View-->
+        <com.maishuo.tingshuohenhaowan.widget.likeview.LikeView
+            android:id="@+id/like_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_50"
+            android:layout_marginBottom="@dimen/dp_70" />
+
+        <!-- 弹幕容器 -->
+        <FrameLayout
+            android:id="@+id/fl_barrage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--中间播放控件-->
+        <RelativeLayout
+            android:id="@+id/rl_centerPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <!--旋转动效-->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/view_rotation"
+                android:layout_width="@dimen/dp_300"
+                android:layout_height="@dimen/dp_300"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                app:lottie_fileName="bowen_white.json"
+                app:lottie_imageAssetsFolder="images/"
+                app:lottie_loop="true" />
+
+            <!--小圆形背景图-->
+            <com.maishuo.tingshuohenhaowan.widget.CircleImageView
+                android:id="@+id/view_circleHead"
+                android:layout_width="@dimen/dp_180"
+                android:layout_height="@dimen/dp_180"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                app:es_shape_type="round" />
+
+            <!--播放暂停icon-->
+            <ImageView
+                android:id="@+id/iv_playIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/general_play_suspended"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_textContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rl_bar"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_publishTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/tv_nickname"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/tv_nickname"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_phonicDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_nickname"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <com.maishuo.tingshuohenhaowan.main.view.VoicePlayRightView
+            android:id="@+id/voice_playRightView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/rl_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="64dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <com.google.android.exoplayer2.ui.PlayerControlView
+                android:id="@+id/progressBar_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:show_timeout="0" />
+
+            <RelativeLayout
+                android:id="@+id/rl_loadingBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_centerVertical="true"
+                    android:background="#40ffffff" />
+
+                <com.maishuo.tingshuohenhaowan.widget.recyclerview.voice.PlayLoadingProgressbar
+                    android:id="@+id/loading_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</FrameLayout>

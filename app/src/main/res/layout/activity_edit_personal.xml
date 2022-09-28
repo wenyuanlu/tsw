@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_head_portrait"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_64"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/head_portrait"
+                android:textColor="@color/FFBFBFC6"
+                android:textSize="@dimen/sp_14" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/iv_head_portrait"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginRight="@dimen/dp_14"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/_xpopup_round3_bg"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_arrow_gray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_nickname"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_64"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/nick_name"
+                android:textColor="@color/FFBFBFC6"
+                android:textSize="@dimen/sp_14" />
+
+            <EditText
+                android:id="@+id/tv_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_30"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:layout_gravity="center_vertical"
+                android:text="默认默认"
+                android:hint="@string/nick_name"
+                android:gravity="center|right"
+                android:textColor="@color/FFBFBFC6"
+                android:textSize="@dimen/sp_12"
+                android:layout_marginLeft="@dimen/dp_14"
+                android:maxLength="8"
+                android:visibility="visible"
+                android:drawableRight="@mipmap/icon_arrow_gray"
+                android:drawablePadding="@dimen/dp_14"
+                android:background="@null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_sex"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_64"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/sex"
+                android:textColor="@color/FFBFBFC6"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:text="女"
+                android:hint="@string/please_select_sex"
+                android:gravity="center|right"
+                android:textColor="@color/FFBFBFC6"
+                android:textSize="@dimen/sp_12"
+                android:layout_marginRight="@dimen/dp_14"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_arrow_gray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_age"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_64"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/age"
+                android:textColor="@color/FFBFBFC6"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:text="1991-01-02"
+                android:gravity="center|right"
+                android:textColor="@color/FFBFBFC6"
+                android:enabled="false"
+                android:textSize="@dimen/sp_12"
+                android:layout_marginRight="@dimen/dp_14"
+                android:layout_marginLeft="@dimen/dp_14" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_arrow_gray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_address"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_64"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/address"
+                android:textColor="@color/FFBFBFC6"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:text="某某地区"
+                android:gravity="center|right"
+                android:textColor="@color/FFBFBFC6"
+                android:textSize="@dimen/sp_12"
+                android:layout_marginRight="@dimen/dp_14"
+                android:layout_marginLeft="@dimen/dp_14"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_arrow_gray" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

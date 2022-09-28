@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/lin_pay_index_item"
+        android:layout_width="@dimen/dp_110"
+        android:layout_height="@dimen/dp_70"
+        android:layout_centerInParent="true"
+        android:background="@drawable/select_pay_item_show"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="2dp"
+                android:text="¥"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tv_money_play_index"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_18"
+                tools:text="30" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_common_money_pay_index"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@mipmap/exceptional_recharge_bounced_drill"
+                android:drawablePadding="@dimen/dp_5"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_10"
+                tools:text="300" />
+
+            <TextView
+                android:id="@+id/tv_discounts_money_pay_index"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/ffff66B9"
+                android:textSize="@dimen/sp_10"
+                tools:text="+30" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_first_pay_index"
+        android:layout_width="@dimen/dp_54"
+        android:layout_height="@dimen/dp_18"
+        android:layout_alignRight="@+id/lin_pay_index_item"
+        android:src="@mipmap/recharge_label_first"
+        android:visibility="gone" />
+</RelativeLayout>

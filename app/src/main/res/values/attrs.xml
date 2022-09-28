@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--圆角或者圆形图片组件-->
+    <declare-styleable name="CircleImageView">
+        <attr name="ease_border_color" format="color" />
+        <attr name="ease_border_width" format="dimension" />
+        <attr name="ease_press_alpha" format="integer" />
+        <attr name="ease_press_color" format="color" />
+        <attr name="ease_radius" format="dimension" />
+        <attr name="es_shape_type" format="enum">
+            <enum name="none" value="0" />
+            <enum name="round" value="1" />
+            <enum name="rectangle" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="AutoLinkTextView">
+        <!-- 链接高亮颜色 -->
+        <attr name="highlight_textcolor" format="color" />
+        <!-- 默认文字颜色 -->
+        <attr name="default_textcolor" format="color" />
+    </declare-styleable>
+
+    <!--侧滑删除控件-->
+    <declare-styleable name="SwipeMenuLayout">
+        <attr name="swipeEnable" format="boolean" />
+        <attr name="ios" format="boolean" />
+        <attr name="leftSwipe" format="boolean" />
+    </declare-styleable>
+
+    <!--带消息数量的头像-->
+    <declare-styleable name="MessageHeadLayout">
+        <attr name="topImage" format="reference" />
+        <attr name="headWidth" format="dimension" />
+        <attr name="headHeight" format="dimension" />
+        <attr name="headMarginTop" format="dimension" />
+        <attr name="showTitle" format="boolean" />
+        <attr name="titleName" format="string" />
+        <attr name="titleSize" format="dimension" />
+        <attr name="titleColors" format="reference" />
+        <attr name="titleMarginTop" format="dimension" />
+        <attr name="messageSize" format="dimension" />
+    </declare-styleable>
+
+    <!--上图下文的自定义控件-->
+    <declare-styleable name="ImageTextLayout">
+        <attr name="commonImage" format="reference" />
+        <attr name="commonImageWidth" format="dimension" />
+        <attr name="commonImageHeight" format="dimension" />
+        <attr name="commonTitle" format="string" />
+        <attr name="commonTitleSize" format="dimension" />
+        <attr name="commonTitleColor" format="color" />
+        <attr name="commonTitleMarginTop" format="dimension" />
+    </declare-styleable>
+
+    <!--横条目的自定义控件-->
+    <declare-styleable name="HorizontalLayout">
+        <attr name="horizontalImage" format="reference" />
+        <attr name="horizontalImageWidth" format="dimension" />
+        <attr name="horizontalImageHeight" format="dimension" />
+        <attr name="horizontalTitle" format="string" />
+        <attr name="horizontalTitleSize" format="dimension" />
+        <attr name="horizontalTitleColor" format="color" />
+        <attr name="horizontalHint" format="string" />
+        <attr name="horizontalHintSize" format="dimension" />
+        <attr name="horizontalHintColor" format="color" />
+        <attr name="horizontalShowArrow" format="boolean" />
+    </declare-styleable>
+
+    <!-- RewardAnim -->
+    <declare-styleable name="RewardLayout">
+        <attr name="max_gift" format="integer" />
+        <attr name="gift_item_layout" format="reference" />
+    </declare-styleable>
+
+</resources>

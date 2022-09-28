@@ -1,0 +1,125 @@
+<resources>
+    <string name="app_name">听说很好玩</string>
+
+    <!-- 网络请求 -->
+    <string name="http_loading">加载中&#8230;</string>
+
+    <string name="http_unknown_error">请求出错，未知错误</string>
+    <string name="http_account_error">账号异常，请重新登录</string>
+    <string name="http_data_explain_error">数据解析异常，请稍后</string>
+    <string name="http_server_out_time">服务器请求超时，请稍后再试</string>
+    <string name="http_network_error">请求失败，请检查网络设置</string>
+    <string name="http_response_error">服务器响应异常，请稍后再试</string>
+    <string name="http_server_error">服务器连接异常，请稍后再试</string>
+    <string name="http_request_cancel">请求被中断，请重试</string>
+    <string name="common_permission_hint">请先授予权限</string>
+    <string name="common_permission_fail">授权失败，请手动授予权限</string>
+    <string name="common_network">当前没有网络连接，请检查网络设置</string>
+    <string name="protocol_str">欢迎来到听说很好玩！\n\n
+        在您使用我们的产品和服务前，请您先认真阅读并充分理解《听说很好玩用户服务协议》和《听说很好玩隐私信息保护政策》。\n\n我们将严格按照上述协议为您提供服务，保护您的信息安全，点击“同意”即表示您已阅读并同意全部条款，可以继续使用我们的产品和服务。如您点击“不同意”，将可能导致无法继续使用我们的产品和服务。\n\n请您再次确认您已全部阅读并充分理解上述条款。</string>
+    <string name="protocol_str_confirm">需同意《听说很好玩用户服务协议》和《听说很好玩隐私信息保护政策》才可继续为您提供服务。</string>
+
+    <!--<string name="vip_problem1">开通连续包月/季/年后，会按照您开通时选择的支付方式定期自动续费会员。如您需要确认下次扣费日期、支付方式等信息： 进入“听说很好玩”app>>点击“个人中心”>>点击“VIP会员”>>点击“管理自动续费”，即可查看您的会员信息。\n\n如您需取消自动续费： 支付宝、微信支付用户，可在管理自动续费页点击页面底部"取消自动续费" 即可取消。\n\n苹果支付用户，需进行如下操作：打开手机设置>>进入“iTunes Store 与 App Store” >>点击“Apple ID”>>点击“查看Apple ID”>>点击“订阅”>>点击“听说很好玩”>>点击“取消订阅”>>点击“确认取消”。</string>-->
+    <string name="vip_problem1">进入“听说很好玩”app>>点击“个人中心”>>查看“VIP会员”。</string>
+    <string name="vip_problem2">会员服务为虚拟产品，一经售出暂不支持退款。</string>
+    <string name="vip_problem3">可尊享免广告、充值玩钻赠送10%等权益。已享受会员权益但更换新设备时，可选择恢复购买进行恢复。</string>
+
+    <string name="account_remove_title1">满足哪些条件才可以注销？</string>
+    <string name="account_remove_title2">账号注销后，您将放弃哪些权益?</string>
+    <string name="account_remove_title3">账号注销后，您在平台产生的数据归平台所有</string>
+    <string name="account_remove_content1">1.账号属于正常且无刷玩币/金额嫌疑； \n2.账号当前无未结清的欠款； \n3.账号当前没有会员自动续费订阅关系； \n4.账号无其他进行中的业务及争议纠纷。</string>
+    <string name="account_remove_content2">1.账号的全部个人资料、实名认证、注册手机号、下载等将删除无法找回；\n2.账号下的未使用的优惠券、玩币、余额等资产权益将自动清除无法恢复。</string>
+    <string name="account_remove_content3">1.账号发布圈子、评论、上传的演说和作品、收藏、关注归平台所有权。</string>
+    <string name="account_remove_success">1.您的所有已登录该账号的设备将自动登出；\n\n2.您的账号资料信息（包括但不限于个人信息、实名认证、注册手机号、玩币、金额、优惠券、下载记录、播放记录等）将自动删除；\n\n3.即使您再次使用同样的手机号注册登录，依然无法找回原有 数据，新注册的账号将作为全新账号使用。</string>
+    <string name="personal_center">个人中心</string>
+    <string name="head_portrait">头像</string>
+    <string name="nick_name">昵称</string>
+    <string name="sex">性别</string>
+    <string name="age">年龄</string>
+    <string name="address">地点</string>
+    <string name="please_select_sex">请选择性别</string>
+    <string name="commit">提交</string>
+    <string name="tips">提示</string>
+    <string name="signout_will_not_be_saved_data">退出后将不在保存数据</string>
+    <string name="this_time_cannot_be_greater_than_the_current_time">所选时间不能大于当前时间</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="birthday">生日</string>
+    <string name="saved_uccessfully">保存成功</string>
+    <string name="permission_denied">权限被拒绝</string>
+    <string name="grant_failed">授权失败</string>
+    <string name="Partial_authority_not_authorized">部分权限未授权</string>
+
+    <!--钱包-->
+    <string name="wallet_wz">玩钻</string>
+    <string name="wallet_details">明细</string>
+    <string name="wallet_top_up_sum">0</string>
+    <string name="wallet_top_up">充值</string>
+    <string name="wallet_ml">魅力</string>
+    <string name="wallet_xy_ml">需要魅力</string>
+    <string name="wallet_ml_count">0</string>
+    <string name="wallet_withdraw_sum">约0元</string>
+    <string name="wallet_withdraw">提现</string>
+    <string name="wallet_withdraw_money">提现金额</string>
+    <string name="wallet_withdraw_money_edit">请输入提现金额</string>
+    <string name="wallet_kc">扣除6元</string>
+    <string name="wallet_date">07–03 12:20</string>
+    <string name="wallet_count">+100钻</string>
+    <string name="wallet_top_up_explain">充值说明：</string>
+    <string name="wallet_top_up_explain_content">1、充值未到账？
+        一般充值后玩钻会即刻发放至您的账户，如遇到服务器拥堵，玩钻到账可能有短时间的延迟，
+        请耐心等待，若超出30分钟仍未到账，请您联系官方客服。\n
+        2、充值是否可开具发票？目前暂不支持开具发票</string>
+    <string name="wallet_top_up_item_money">0</string>
+    <string name="wallet_top_up_item_diamond">+1</string>
+    <string name="wallet_withdraw_after_tax_money">税后金额</string>
+    <string name="wallet_withdraw_unit">￥</string>
+    <string name="wallet_withdraw_yuan">元</string>
+    <string name="wallet_withdraw_wx_info">微信昵称</string>
+    <string name="wallet_withdraw_ali_info">姓名 支付宝账号</string>
+    <string name="wallet_withdraw_ali_bind">去绑定</string>
+    <string name="wallet_withdraw_ali_rule">根据国家法律规定，您参与演说获得的收益，平台将代为扣20%的个人所得税，您最终提现所得为税后金额。</string>
+    <string name="wallet_withdraw_money_sum">可提现金额为1,0000元</string>
+    <string name="wallet_withdraw_money_all">全部</string>
+    <string name="wallet_withdraw_bind_ali_name">真实姓名</string>
+    <string name="wallet_withdraw_bind_ali_name_hint">请输入支付宝实名认证的真实姓名</string>
+    <string name="wallet_withdraw_bind_ali_account">支付宝账号</string>
+    <string name="wallet_withdraw_bind_ali_account_hint">请输入支付宝账号</string>
+    <string name="wallet_withdraw_bind_ali_save">安全保存</string>
+    <string name="wallet_withdraw_bind_ali_remind">温馨提醒：</string>
+    <string name="wallet_withdraw_bind_ali_remind_content">1、请确保支付宝已经实名认证，并填写支付宝实名认证的真实姓名。\n
+                                                           2、我们承诺不会向任何人透露您的个人信息</string>
+    <string name="h5_withdraw_balance_hint">可提余额</string>
+    <string name="h5_withdraw_time_hint">预估到账</string>
+    <string name="h5_withdraw_no_top_up_hint">暂不可提现</string>
+    <string name="h5_withdraw_right_title">记录</string>
+
+    <string name="prise_text">点赞</string>
+    <string name="danmu_text">弹幕</string>
+    <string name="pc_up_course">PC端上传教程</string>
+    <string name="mobile_up_course">手机端上传教程</string>
+
+    <string name="all_read">全部已读</string>
+    <string name="agree">同意</string>
+    <string name="refuse">拒绝</string>
+    <string name="save">保存</string>
+
+    <string name="real_user_auth_tip_title">摄像头权限未授权</string>
+    <string name="real_user_auth_tip_message">实名认证功能需要采集用户面部人脸数据进行上传数据分析,是否同意授权?</string>
+    <string name="apply_camera_auth_tip_message">该功能需要摄像头权限,是否同意授权?</string>
+
+    <string name="apply_recorder_permission_tip_title">麦克风权限未授权</string>
+    <string name="apply_recorder_permission_tip_message">发布留声功能需要采集您及您周围的音频声音数据并进行上传，是否同意授权?</string>
+    <string name="apply_save_permission_tip_message">保存文件需要获取您的设备存储权限，是否同意授权?</string>
+
+    <string name="apply_read_writ_permission_tip_title">文件读写权限未授权</string>
+    <string name="apply_read_writ_permission_tip_message">发布留声功能获取您磁盘数据并进行上传，是否同意授权?</string>
+
+    <string name="apply_share_permission_tip_title">分享功能未授权</string>
+    <string name="apply_share_permission_tip_message">分享功能需要您同意用户隐私协议，是否同意授权?</string>
+
+    <string name="not_apply_permission_tip_title">权限未授权</string>
+    <string name="not_apply_permission_tip_message">权限未授权,需要跳转至设置界面进行设置,是否跳转?</string>
+
+</resources>
